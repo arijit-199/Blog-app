@@ -1,0 +1,519 @@
+$lightGreen : #b9e7e7;
+
+.app {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 1024px;
+
+        .link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        // LOGIN & REGISTER
+
+        .auth {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: $lightGreen ;
+
+            h1 {
+                font-size: 20px;
+                color: teal;
+                margin-bottom: 20px;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                padding: 50px;
+                background-color: #fff;
+                width: 200px;
+                gap: 20px;
+
+                input {
+                    border: none;
+                    padding: 10px;
+                    border-bottom: 1px solid gray;
+                }
+
+                p {
+                    font-size: 12px;
+                    text-align: center;
+                    color: red;
+                }
+
+                button {
+                    padding: 10px;
+                    border: none;
+                    background-color: teal;
+                    color: #fff;
+                }
+
+                span {
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
+        }
+
+        //NAVBAR
+
+        .navbar {
+            .container {
+                padding: 10px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                .logo {
+                    cursor: pointer;
+                    img {
+                        width: 120px;
+                    }
+                }
+
+                .links {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+
+                    h6 {
+                        font-size: 16px;
+                        font-weight: 300;
+                        color: rgb(77, 77, 77);
+                        text-decoration: none;
+                        border-bottom: 1px solid white;
+
+                        &:hover {
+                            color: teal;
+                            border-bottom: 1px solid teal;
+                        }
+                    }
+
+                    span {
+                        cursor: pointer;
+                        border-bottom: 1px solid white;
+
+
+                        &:hover {
+                            color: teal;
+                            border-bottom: 1px solid teal;
+                        }
+                        
+                    }
+
+                    .button {
+                        width: max-content;
+                        padding: 7.5px 15px;
+                        border: none;
+                        cursor: pointer;
+                        color: teal;
+                        background-color: #fff;
+                        border: 1px solid teal;
+
+                        &:hover {
+                            border: 1px solid white;
+                            background-color: $lightGreen;
+                            color: black;
+                        }
+                    }
+
+                    .write {
+                        background-color: $lightGreen;
+                        margin-left: 5px;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid white;
+
+
+                        &:hover {
+                            color: teal;
+                            background-color: white;
+                            border: 1px solid teal;
+                        }
+                    }
+                }
+            }
+        }
+
+        //FOOTER
+
+        footer {
+            margin-top: 100px;
+            padding: 20px;
+            background-color: $lightGreen;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12px;
+
+            img {
+                height: 50px;
+            }
+        }
+
+        // HOME
+
+        .home {
+            .posts {
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 150px;
+
+                .post {
+                    display: flex;
+                    gap: 100px;
+
+                    &:nth-child(2n+1) {
+                        flex-direction: row-reverse;
+                    }
+
+                    .img {
+                        flex: 3;
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            background-color: $lightGreen;
+                            position: absolute;
+                            top: 20px;
+                            left: -20px;
+                            z-index: -1;
+                        }
+
+                        img {
+                            width: 100%;
+                            max-height: 400vh;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .content {
+                        flex: 3;
+                        display: flex;
+                        flex-direction: column;
+
+                        h1 {
+                            font-size: 42px;
+                        }
+
+                        p {
+                            font-size: 14px;
+                        }
+
+                        button {
+                            width: max-content;
+                            padding: 7.5px 15px;
+                            border: none;
+                            cursor: pointer;
+                            color: teal;
+                            background-color: #fff;
+                            border: 1px solid teal;
+
+                            &:hover {
+                                border: 1px solid white;
+                                background-color: $lightGreen;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // SINGLE
+        .single {
+            display: flex;
+            gap: 50px;
+
+            .content {
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                img {
+                    width: 80%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+
+                .user {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+                     
+                    .info{
+                        gap: 0px;
+                    }
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    span {
+                        font-weight: bold;
+                    }
+
+                    p {
+                        margin-top: 2px;
+                    }
+                }
+
+                .edit {
+                    display: flex;
+                    gap: 5px;
+
+                    .edit {
+                        width: 24px;
+                        height: 24px;
+                        margin-top: 2px;
+                        cursor: pointer;
+                    }
+
+                    .delete {
+                        width: 28px;
+                        height: 28px;
+                        cursor: pointer;
+                    }
+                }
+
+                h1 {
+                    font-size: 42px;
+                    color: #333;
+                }
+
+                p {
+                    text-align: justify;
+                    line-height: 30px;
+
+                }
+            }
+
+            .menu {
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                h1 {
+                    font-size: 20px;
+                    color: #555;
+                }
+
+                .post {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    img {
+                        width: 100%;
+                        height: 200px;
+                        object-fit: cover;
+                    }
+
+                    h2 {
+                        color: #555;
+                    }
+
+                    button {
+                        width: max-content;
+                        padding: 7.5px 15px;
+                        border: none;
+                        cursor: pointer;
+                        color: teal;
+                        background-color: #fff;
+                        border: 1px solid teal;
+
+                        &:hover {
+                            border: 1px solid white;
+                            background-color: $lightGreen;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+
+        // WRITE
+
+        .add {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+
+            .content {
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                input {
+                    padding: 10px;
+                    border: 1px solid lightgray;
+                }
+
+                .editorContainer {
+                    height: 300px;
+                    overflow: scroll;
+                    border: 1px solid lightgray;
+
+                    .editor {
+                        height: 100%;
+                        border: none;
+                    }
+                }
+
+            }
+
+            .menu {
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .item {
+                    border: 1px solid lightgray;
+                    padding: 10px;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    color: #555;
+
+                    h1 {
+                        font-size: 20px;
+                    }
+
+                    .file {
+                        text-decoration: underline;
+                        cursor: pointer;
+                        font-size: 15px;
+                    }
+
+                    .buttons {
+                        display: flex;
+                        justify-content: space-between;
+
+                        :first-child {
+                            cursor: pointer;
+                            color: teal;
+                            background-color: #fff;
+                            border: 1px solid teal;
+                            padding: 3px 5px;
+
+                        }
+
+                        :last-child {
+                            cursor: pointer;
+                            color: white;
+                            background-color: teal;
+                            border: 1px solid teal;
+                            padding: 3px 5px;
+
+                        }
+                    }
+
+                    .cat {
+                        display: flex;
+                        align-items: center;
+                        gap: 2px;
+                        color: teal;
+                    }
+                }
+            }
+        }
+
+        // SETTINGS
+
+        .userProfile {
+
+            // margin-top: -30px;
+            
+            h1 {
+                margin-top: 50px;
+                font-weight: 500;
+            }
+
+            .content{
+                display: flex;
+                gap: 50px;
+                margin-top: 50px;
+                
+    
+                .imgTxt {
+                    font-weight: bold;
+                    margin-top: 35px;
+    
+                }
+    
+                button {
+                    width: max-content;
+                    padding: 7.5px 15px;
+                    border: none;
+                    cursor: pointer;
+                    color: teal;
+                    background-color: #fff;
+                    border: 1px solid teal;
+    
+                    &:hover {
+                        border: 1px solid white;
+                        background-color: $lightGreen;
+                        color: black;
+                    }
+                }
+                
+                .imgSection{
+                    flex-direction: row;
+                    justify-content: center;
+    
+                    img{
+                        width: 300px;
+                        height: 300px;
+                        border-radius: 150px;
+                    }
+
+                    .success{
+                        color: green;
+                    }
+                }
+            }
+
+            .button{
+                margin-top: 50px;
+                margin-left: 82px;
+                width: max-content;
+                padding: 7.5px 15px;
+                border: none;
+                cursor: pointer;
+                color: teal;
+                background-color: #fff;
+                border: 1px solid teal;
+
+                &:hover {
+                    border: 1px solid white;
+                    background-color: $lightGreen;
+                    color: black;
+                }
+            }
+        }
+    }
+}
